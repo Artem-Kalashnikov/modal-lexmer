@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.modal-content::-webkit-scrollbar-track {
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #323d78;
+}
+.modal-content:hover::-webkit-scrollbar-thumb {
+  background: #323d78;
+}
+
+button,
+.modal-header .modal-title {
+  font-family: "Bebas Neue", cursive;
+}
+
+.modal-header,
+.modal-title {
+  text-transform: uppercase;
+}
+
+.modal-body .modal-title {
+  margin-bottom: 14px;
+  margin-top: 23px;
+}
+
+#garant .modal__order--title {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: left;
+  color: #22232d;
+}
+
+#garant .modal-dialog {
+  max-width: 807px;
+}
+
+#garant .modal-content {
+  border-radius: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 660px;
+}
+
+#garant .modal-header {
+  padding: 0;
+  padding-top: 50px;
+  border-bottom: 2px solid #f6f6f6;
+}
+
+.modal-header .modal-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #22232d;
+}
+
+#garant .modal-header .modal-title {
+  margin-left: 98px;
+}
+
+.modal-header .close {
+  padding: 15px 15px;
+  position: absolute;
+  top: 16px;
+  left: 757px;
+  width: 50px;
+  height: 50px;
+  background-color: #f6f6f6;
+}
+
+#garant .modal-body {
+  padding: 23px 98px;
+}
+
+.modal__return .modal-title,
+.modal__order .modal-title {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: left;
+  color: #22232d;
+}
+
+#garant .modal__order--text {
+  font-size: 15px;
+  line-height: 1.35;
+  text-align: left;
+  color: #4d4d4d;
+}
+
+@media (max-width: 1200px) {
+  .modal-dialog {
+    margin: 1.75rem auto;
+  }
+  #garant .modal-dialog {
+    max-width: 728px;
+  }
+}
+
+@media (max-width: 768px) {
+  #garant .modal-dialog {
+    max-width: 440px;
+  }
+
+  #garant .modal-header .modal-title {
+    margin-left: 20px;
+  }
+
+  #garant .modal-body {
+    padding: 23px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #garant .modal-dialog {
+    max-width: 300px;
+  }
+
+  #garant .modal-header .modal-title {
+    margin-left: 26px;
+  }
+
+  #garant .modal-body {
+    padding: 23px 26px;
+  }
+}
