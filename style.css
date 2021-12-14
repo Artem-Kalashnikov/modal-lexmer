@@ -1,5 +1,26 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BebasNeue";
+  src: url("./fonts/BebasNeue-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Bold.woff") format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./fonts/ProximaNova-Regular.woff") format("woff");
+  font-weight: 400;
+}
+body {
+  font-family: "ProximaNova";
+}
 .modal-content::-webkit-scrollbar-track {
   border-radius: 4px;
 }
@@ -18,7 +39,7 @@
 
 button,
 .modal-header .modal-title {
-  font-family: "Bebas Neue", cursive;
+  font-family: "BebasNeue";
 }
 
 .modal-header,
@@ -43,13 +64,22 @@ button,
 
 #garant .modal-dialog {
   max-width: 807px;
+  margin-top: 50px;
+}
+
+#size .modal-content {
+  margin-top: 51px;
+}
+
+.modal-content {
+  border-radius: 0;
 }
 
 #garant .modal-content {
-  border-radius: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 660px;
+  font-family: "ProximaNova";
 }
 
 #garant .modal-header {
@@ -59,7 +89,7 @@ button,
 }
 
 .modal-header .modal-title {
-  font-family: "Bebas Neue", cursive;
+  font-family: "BebasNeue";
   font-size: 36px;
   font-weight: bold;
   font-stretch: normal;
@@ -70,8 +100,12 @@ button,
   color: #22232d;
 }
 
-#garant .modal-header .modal-title {
+#garant .modal-header .modal-title,
+#size .modal-header .modal-title {
   margin-left: 98px;
+  font-style: 36px;
+  text-align: left;
+  color: #22232d;
 }
 
 .modal-header .close {
@@ -108,6 +142,10 @@ button,
   max-width: 807px;
 }
 
+.modal-content {
+  font-family: "ProximaNova";
+}
+
 #size .modal-header {
   border: none;
 }
@@ -120,17 +158,48 @@ button,
   font-weight: 700;
 }
 
+.size__card--heading {
+  padding: 0;
+  padding-left: 5px;
+  font-family: "BebasNeue";
+  font-size: 19px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #22232d;
+  padding-bottom: 14px;
+}
+
+.size__card--number {
+  font-family: "ProximaNova";
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 0.16px;
+  text-align: left;
+  color: #22232d;
+}
+
 tr:nth-child(1) {
   border-bottom: 2px solid #f6f6f6;
 }
 
-th,
 td {
+  width: 25rem;
   padding: 10px 15px;
 }
 
-td {
-  width: 25%;
+td:nth-child(1) {
+  padding-left: 98px;
+}
+
+td:nth-child(4) {
+  padding-right: 98px;
 }
 
 .size__card table {
@@ -145,53 +214,123 @@ table {
   background-color: #f3f3f3;
 }
 
-.size__card {
-  padding: 0 98px;
-}
-
 @media (max-width: 1200px) {
-  .modal-dialog {
-    margin: 1.75rem auto;
-  }
   #garant .modal-dialog {
-    max-width: 728px;
+    max-width: 100%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #garant .modal-header .modal-title,
+  #size .modal-header .modal-title {
+    font-size: 32px;
   }
 
   #size .modal-dialog {
-    max-width: 671px;
+    max-width: 100%;
+    margin-top: 86px;
+    margin-right: 48px;
+    margin-left: 48px;
+  }
+  td:nth-child(1) {
+    padding-left: 92px;
+  }
+
+  td:nth-child(4) {
+    padding-right: 92px;
   }
 }
 
 @media (max-width: 768px) {
-  #garant .modal-dialog,
-  #size .modal-dialog {
-    max-width: 440px;
+  #garant .modal-dialog {
+    margin-top: 70px;
   }
 
-  .size__card {
-    padding: 0 20px;
+  #size .modal-content {
+    margin-top: 172px;
   }
 
-  #garant .modal-header .modal-title {
+  #garant .modal-header .modal-title,
+  #size .modal-header .modal-title {
     margin-left: 20px;
+  }
+
+  .modal-header .close {
+    width: 44px;
+    height: 44px;
+    padding: 8px 8px;
   }
 
   #garant .modal-body {
     padding: 23px 20px;
   }
+
+  #garant .modal-header .modal-title,
+  #size .modal-header .modal-title {
+    font-size: 30px;
+  }
+
+  #size .modal-dialog,
+  #garant .modal-dialog {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .size__card--number {
+    font-size: 16px;
+  }
+
+  td:nth-child(1) {
+    padding-left: 43px;
+  }
+
+  td:nth-child(4) {
+    padding-right: 43px;
+  }
 }
 
 @media (max-width: 480px) {
-  #garant .modal-dialog,
-  #size .modal-dialog {
-    max-width: 300px;
+  #garant .modal-dialog {
+    margin-top: 10px;
   }
 
   #garant .modal-header .modal-title {
     margin-left: 26px;
   }
 
+  .modal-header .close {
+    width: 38px;
+    height: 38px;
+  }
+
+  #size .modal-content {
+    margin-top: 63px;
+  }
+
   #garant .modal-body {
     padding: 23px 26px;
+  }
+
+  #garant .modal-header .modal-title,
+  #size .modal-header .modal-title {
+    font-size: 28px;
+  }
+
+  .size__card--heading {
+    font-size: 15px;
+  }
+
+  #size .modal-dialog,
+  #garant .modal-dialog {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  td:nth-child(1) {
+    padding-left: 20px;
+  }
+
+  td:nth-child(4) {
+    padding-right: 20px;
   }
 }
